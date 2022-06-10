@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NavigationDrawerViewController.swift
 //  UIDesign
 //
 //  Created by Shivani Gupta on 31/05/22.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class NavigationDrawerViewController:UIViewController{
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
