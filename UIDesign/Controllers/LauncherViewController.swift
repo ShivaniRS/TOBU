@@ -21,6 +21,7 @@ class LauncherViewController: UIViewController{
     @IBOutlet weak var checkBtn: UIButton!
     
     var flag = false
+    var viewType:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +48,16 @@ class LauncherViewController: UIViewController{
         checkBtn.imageView?.layer.transform = CATransform3DMakeScale(0.4, 0.4, 0.4)
         
         containerView.isHidden = true
-        //anotherView.isHidden = true
-    
+        anotherView.isHidden = true
+        
+//        if viewType == "User"{
+//            containerView.isHidden = false
+//            
+//        }else if(viewType == "User"){
+//            anotherView.isHidden = false
+//        }
+        containerView.isHidden = true
+        anotherView.isHidden = true
     }
     
     @IBAction func getStartedButton(_ sender: Any) {
@@ -70,19 +79,31 @@ class LauncherViewController: UIViewController{
      }
     
     @IBAction func mailButton(_ sender: Any) {
-     
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"LoginViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
     
     @IBAction func gmailButton(_ sender: Any) {
-     
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"AboutMomentViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
     
     @IBAction func facebookButton(_ sender: Any) {
-     
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"ActionRequiredViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
     
     @IBAction func twitterButton(_ sender: Any) {
-     
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"InitialTobuMomentViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
    
     @IBAction func checkButton(_ sender: Any) {
@@ -94,15 +115,5 @@ class LauncherViewController: UIViewController{
             checkBtn.setImage(UIImage(named: "unchecked"), for: .normal)
             flag = false
         }
-
-//        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-//            (sender as AnyObject).transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-//
-//               }) { (success) in
-//                   UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-//                       sender.isSelected = !sender.isSelected
-//                       sender.transform = .identity
-//                   }, completion: nil)
-//               }
      }
 }

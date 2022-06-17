@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
 class ThirdViewController: UIViewController {
     
@@ -26,6 +27,8 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var editView: UIView!
     @IBOutlet weak var shareView: UIView!
     @IBOutlet weak var menuImageView: UIImageView!
+    @IBOutlet weak var settingView: UIImageView!
+    @IBOutlet weak var notificationView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var swipeGesture: UISwipeGestureRecognizer!
     
@@ -52,10 +55,20 @@ class ThirdViewController: UIViewController {
         cCollectionView.delegate = self
         home = self.containerView.transform
         
+        // for open navigation menu
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
           menuImageView.isUserInteractionEnabled = true
           menuImageView.addGestureRecognizer(tapGestureRecognizer)
-    
+        
+        // for notication
+        let tapGestureRecognizerfForNotification = UITapGestureRecognizer(target: self, action: #selector(notificationImageTapped(tapGestureRecognizer:)))
+        notificationView.isUserInteractionEnabled = true
+        notificationView.addGestureRecognizer(tapGestureRecognizerfForNotification)
+        
+        // for setting
+        let tapGestureRecognizerForSetting = UITapGestureRecognizer(target: self, action: #selector(settingImageTapped(tapGestureRecognizer:)))
+        settingView.isUserInteractionEnabled = true
+        settingView.addGestureRecognizer(tapGestureRecognizerForSetting)
     }
     
     
@@ -63,6 +76,22 @@ class ThirdViewController: UIViewController {
     {
         self.containerView.layer.cornerRadius = 40
         showMenu(containerView: containerView)
+    }
+    
+    @objc func notificationImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"NotificationViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func settingImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"SettingViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -108,9 +137,23 @@ class ThirdViewController: UIViewController {
        
      }
     
+    @IBAction func contactButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"SettingViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
+    
     @IBAction func momentButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
         let vc = storyboard.instantiateViewController(withIdentifier:"SecondViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"LauncherViewController")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
      }
@@ -218,6 +261,12 @@ extension ThirdViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
 }
 
-
+extension ThirdViewController:IndicatorInfoProvider{
+   
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "MemoryBooks")
+    }
+    
+}
 
 

@@ -11,10 +11,14 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dateCollectionView: UICollectionView!
     @IBOutlet weak var momentCollectionView: UICollectionView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
-    @IBOutlet weak var memoryView: UIView!
+    @IBOutlet weak var momentView: UIView!
+    @IBOutlet weak var memoryButton: UIButton!
     @IBOutlet weak var letsGoView: UIView!
     @IBOutlet weak var menuImageView: UIImageView!
+    @IBOutlet weak var settingView: UIImageView!
+    @IBOutlet weak var notificationView: UIImageView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var uploadBtn: UIButton!
     @IBOutlet weak var swipeGesture: UISwipeGestureRecognizer!
     
     var menuValue = false
@@ -33,8 +37,11 @@ class SecondViewController: UIViewController {
         currentMonth = Date().month
         currentDate = Date().day
         currentMonthDay = Date().getDaysInMonth()
-        memoryView.layer.cornerRadius = 20
+    
+        memoryButton.layer.cornerRadius = 20
+        momentView.layer.cornerRadius = 20
         letsGoView.layer.cornerRadius = 20
+        uploadBtn.layer.cornerRadius = 10
        
         home = self.containerView.transform
     
@@ -42,10 +49,25 @@ class SecondViewController: UIViewController {
             dateArray.append(i)
         }
         
+        // for open navigation menu
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
           menuImageView.isUserInteractionEnabled = true
           menuImageView.addGestureRecognizer(tapGestureRecognizer)
           
+        // for notication
+        let tapGestureRecognizerfForNotification = UITapGestureRecognizer(target: self, action: #selector(notificationImageTapped(tapGestureRecognizer:)))
+        notificationView.isUserInteractionEnabled = true
+        notificationView.addGestureRecognizer(tapGestureRecognizerfForNotification)
+     
+        // for setting
+        let tapGestureRecognizerForSetting = UITapGestureRecognizer(target: self, action: #selector(settingImageTapped(tapGestureRecognizer:)))
+        settingView.isUserInteractionEnabled = true
+        settingView.addGestureRecognizer(tapGestureRecognizerForSetting)
+        
+        //for lets go button
+        let tapGestureRecognizerForLetsGo = UITapGestureRecognizer(target: self, action: #selector(letsGoViewTapped(tapGestureRecognizer:)))
+        letsGoView.isUserInteractionEnabled = true
+        letsGoView.addGestureRecognizer(tapGestureRecognizerForLetsGo)
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -55,6 +77,30 @@ class SecondViewController: UIViewController {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         self.containerView.layer.cornerRadius = 40
        showMenu(containerView: containerView)
+    }
+    
+    @objc func notificationImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"NotificationViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func settingImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"SettingViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func letsGoViewTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"GoMomentViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func showGestureMenu(_ sender: UISwipeGestureRecognizer) {
@@ -101,7 +147,31 @@ class SecondViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
      }
-       
+    
+    @IBAction func contactButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"SettingViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"LauncherViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
+    
+    @IBAction func closeMomentButton(_ sender: Any) {
+        momentView.isHidden = true
+     }
+    
+    @IBAction func creatMemoryButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"MemoryMomentViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
     
 }
 
@@ -145,7 +215,7 @@ extension SecondViewController: UICollectionViewDataSource, UICollectionViewDele
        }else if(collectionView == imageCollectionView){
            
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "circleCell", for: indexPath as IndexPath) as! CircleImageCollectionViewCell
-          // cell.circleImageView.layer.cornerRadius = 35
+         cell.circleImageView.layer.cornerRadius = 25
     
            if imagesArray.count > 0 {
                let image = imagesArray[indexPath.row]

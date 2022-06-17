@@ -32,9 +32,20 @@ class ViewController: UIViewController {
         
         home = self.containerView.transform
         
+        // for open navigation menu
       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         menuImageView.isUserInteractionEnabled = true
         menuImageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        // for notication
+        let tapGestureRecognizerfForNotification = UITapGestureRecognizer(target: self, action: #selector(notificationImageTapped(tapGestureRecognizer:)))
+        notificationView.isUserInteractionEnabled = true
+        notificationView.addGestureRecognizer(tapGestureRecognizerfForNotification)
+        
+        // for setting
+        let tapGestureRecognizerForSetting = UITapGestureRecognizer(target: self, action: #selector(settingImageTapped(tapGestureRecognizer:)))
+        settingView.isUserInteractionEnabled = true
+        settingView.addGestureRecognizer(tapGestureRecognizerForSetting)
         
         registerNib()
     
@@ -50,6 +61,22 @@ class ViewController: UIViewController {
     {
     self.containerView.layer.cornerRadius = 40
     showMenu(containerView: containerView)
+    }
+    
+    @objc func notificationImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"NotificationViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func settingImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"SettingViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 
     @IBAction func showGestureMenu(_ sender: UISwipeGestureRecognizer) {
@@ -97,6 +124,18 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
      }
        
+    @IBAction func contactButton(_ sender: Any) {
+       
+     }
+    
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"LauncherViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+     }
+    
     // for status bar colour
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent

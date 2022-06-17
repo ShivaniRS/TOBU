@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4058ECC82859BA8200290C8F /* MemoryMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECC72859BA8200290C8F /* MemoryMomentViewController.swift */; };
+		4058ECCA2859E11400290C8F /* MomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECC92859E11400290C8F /* MomentsViewController.swift */; };
+		4058ECCC2859E13D00290C8F /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECCB2859E13D00290C8F /* MemoryViewController.swift */; };
+		4058ECCE285A220F00290C8F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECCD285A220F00290C8F /* NotificationViewController.swift */; };
+		4058ECD4285B550B00290C8F /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECD3285B550B00290C8F /* AddMemberViewController.swift */; };
+		4058ECD6285C478500290C8F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECD5285C478500290C8F /* UserProfileViewController.swift */; };
+		4058ECD8285C4CB700290C8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECD7285C4CB700290C8F /* SettingViewController.swift */; };
+		4058ECDA285C7D2800290C8F /* GoMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4058ECD9285C7D2700290C8F /* GoMomentViewController.swift */; };
 		40F72A012845D66E00157DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A002845D66E00157DD4 /* AppDelegate.swift */; };
 		40F72A032845D66E00157DD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A022845D66E00157DD4 /* SceneDelegate.swift */; };
 		40F72A052845D66E00157DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A042845D66E00157DD4 /* ViewController.swift */; };
@@ -28,11 +36,24 @@
 		40F72A3628507F7C00157DD4 /* LauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A3528507F7B00157DD4 /* LauncherViewController.swift */; };
 		40F72A382850BFB400157DD4 /* InitialTobuMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A372850BFB300157DD4 /* InitialTobuMomentViewController.swift */; };
 		40F72A3A2852F67B00157DD4 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A392852F67B00157DD4 /* CreateAccountViewController.swift */; };
-		40F72A3C28533C1E00157DD4 /* AboutMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A3B28533C1D00157DD4 /* AboutMomentViewController.swift */; };
+		40F72A3E2856527600157DD4 /* AboutMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A3D2856527600157DD4 /* AboutMomentViewController.swift */; };
+		40F72A402856F46A00157DD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A3F2856F46A00157DD4 /* LoginViewController.swift */; };
+		40F72A422856F6F300157DD4 /* ActionRequiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A412856F6F300157DD4 /* ActionRequiredViewController.swift */; };
+		40F72A44285705AA00157DD4 /* TagUntagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A43285705AA00157DD4 /* TagUntagViewController.swift */; };
+		40F72A462857076600157DD4 /* TagUntagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A452857076600157DD4 /* TagUntagCollectionViewCell.swift */; };
+		40F72A482858A63300157DD4 /* SaveMemoryVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F72A472858A63300157DD4 /* SaveMemoryVieController.swift */; };
 		983264CDA286BEF8C50B4DA8 /* Pods_UIDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631D8E2FC59FD1BFAA027122 /* Pods_UIDesign.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4058ECC72859BA8200290C8F /* MemoryMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMomentViewController.swift; sourceTree = "<group>"; };
+		4058ECC92859E11400290C8F /* MomentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsViewController.swift; sourceTree = "<group>"; };
+		4058ECCB2859E13D00290C8F /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
+		4058ECCD285A220F00290C8F /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		4058ECD3285B550B00290C8F /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		4058ECD5285C478500290C8F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		4058ECD7285C4CB700290C8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4058ECD9285C7D2700290C8F /* GoMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoMomentViewController.swift; sourceTree = "<group>"; };
 		40F729FD2845D66E00157DD4 /* UIDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F72A002845D66E00157DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40F72A022845D66E00157DD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +77,12 @@
 		40F72A3528507F7B00157DD4 /* LauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherViewController.swift; sourceTree = "<group>"; };
 		40F72A372850BFB300157DD4 /* InitialTobuMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTobuMomentViewController.swift; sourceTree = "<group>"; };
 		40F72A392852F67B00157DD4 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		40F72A3B28533C1D00157DD4 /* AboutMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMomentViewController.swift; sourceTree = "<group>"; };
+		40F72A3D2856527600157DD4 /* AboutMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMomentViewController.swift; sourceTree = "<group>"; };
+		40F72A3F2856F46A00157DD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		40F72A412856F6F300157DD4 /* ActionRequiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequiredViewController.swift; sourceTree = "<group>"; };
+		40F72A43285705AA00157DD4 /* TagUntagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagUntagViewController.swift; sourceTree = "<group>"; };
+		40F72A452857076600157DD4 /* TagUntagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagUntagCollectionViewCell.swift; sourceTree = "<group>"; };
+		40F72A472858A63300157DD4 /* SaveMemoryVieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMemoryVieController.swift; sourceTree = "<group>"; };
 		631D8E2FC59FD1BFAA027122 /* Pods_UIDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A04A36D8CEED70311FCA183 /* Pods-UIDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIDesign.debug.xcconfig"; path = "Target Support Files/Pods-UIDesign/Pods-UIDesign.debug.xcconfig"; sourceTree = "<group>"; };
 		A560D262EE223051D3886A76 /* Pods-UIDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIDesign.release.xcconfig"; path = "Target Support Files/Pods-UIDesign/Pods-UIDesign.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +154,19 @@
 				40F72A3528507F7B00157DD4 /* LauncherViewController.swift */,
 				40F72A372850BFB300157DD4 /* InitialTobuMomentViewController.swift */,
 				40F72A392852F67B00157DD4 /* CreateAccountViewController.swift */,
-				40F72A3B28533C1D00157DD4 /* AboutMomentViewController.swift */,
+				40F72A3D2856527600157DD4 /* AboutMomentViewController.swift */,
+				40F72A3F2856F46A00157DD4 /* LoginViewController.swift */,
+				40F72A412856F6F300157DD4 /* ActionRequiredViewController.swift */,
+				40F72A43285705AA00157DD4 /* TagUntagViewController.swift */,
+				40F72A472858A63300157DD4 /* SaveMemoryVieController.swift */,
+				4058ECC72859BA8200290C8F /* MemoryMomentViewController.swift */,
+				4058ECC92859E11400290C8F /* MomentsViewController.swift */,
+				4058ECCB2859E13D00290C8F /* MemoryViewController.swift */,
+				4058ECCD285A220F00290C8F /* NotificationViewController.swift */,
+				4058ECD3285B550B00290C8F /* AddMemberViewController.swift */,
+				4058ECD5285C478500290C8F /* UserProfileViewController.swift */,
+				4058ECD7285C4CB700290C8F /* SettingViewController.swift */,
+				4058ECD9285C7D2700290C8F /* GoMomentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +180,7 @@
 				40F72A232845D83400157DD4 /* CircleImageCollectionViewCell.swift */,
 				40F72A272845F3BE00157DD4 /* ImageCollectionViewCell.swift */,
 				40F72A282845F3BE00157DD4 /* ImageCollectionViewCell.xib */,
+				40F72A452857076600157DD4 /* TagUntagCollectionViewCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -279,23 +318,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4058ECD4285B550B00290C8F /* AddMemberViewController.swift in Sources */,
 				40F72A222845D82500157DD4 /* MomentCollectionViewCell.swift in Sources */,
 				40F72A3628507F7C00157DD4 /* LauncherViewController.swift in Sources */,
 				40F72A182845D79F00157DD4 /* SecondViewController.swift in Sources */,
 				40F72A382850BFB400157DD4 /* InitialTobuMomentViewController.swift in Sources */,
+				4058ECD8285C4CB700290C8F /* SettingViewController.swift in Sources */,
+				40F72A402856F46A00157DD4 /* LoginViewController.swift in Sources */,
 				40F72A262845F2C000157DD4 /* ThirdViewController.swift in Sources */,
+				4058ECC82859BA8200290C8F /* MemoryMomentViewController.swift in Sources */,
 				40F72A052845D66E00157DD4 /* ViewController.swift in Sources */,
+				40F72A422856F6F300157DD4 /* ActionRequiredViewController.swift in Sources */,
+				4058ECD6285C478500290C8F /* UserProfileViewController.swift in Sources */,
+				4058ECDA285C7D2800290C8F /* GoMomentViewController.swift in Sources */,
 				40F72A012845D66E00157DD4 /* AppDelegate.swift in Sources */,
 				40F72A3A2852F67B00157DD4 /* CreateAccountViewController.swift in Sources */,
 				40F72A032845D66E00157DD4 /* SceneDelegate.swift in Sources */,
 				40F72A292845F3BE00157DD4 /* ImageCollectionViewCell.swift in Sources */,
+				4058ECCA2859E11400290C8F /* MomentsViewController.swift in Sources */,
 				40F72A242845D83400157DD4 /* CircleImageCollectionViewCell.swift in Sources */,
+				40F72A482858A63300157DD4 /* SaveMemoryVieController.swift in Sources */,
 				40F72A32284E0F4B00157DD4 /* PinterestLayout.swift in Sources */,
+				4058ECCC2859E13D00290C8F /* MemoryViewController.swift in Sources */,
 				40F72A1E2845D7F000157DD4 /* ContactCollectionViewCell.swift in Sources */,
+				40F72A44285705AA00157DD4 /* TagUntagViewController.swift in Sources */,
 				40F72A2C28464BDB00157DD4 /* NavigationDrawerViewController.swift in Sources */,
 				40F72A202845D80A00157DD4 /* DateCollectionViewCell.swift in Sources */,
 				40F72A2E2849F40F00157DD4 /* Utils.swift in Sources */,
-				40F72A3C28533C1E00157DD4 /* AboutMomentViewController.swift in Sources */,
+				4058ECCE285A220F00290C8F /* NotificationViewController.swift in Sources */,
+				40F72A3E2856527600157DD4 /* AboutMomentViewController.swift in Sources */,
+				40F72A462857076600157DD4 /* TagUntagCollectionViewCell.swift in Sources */,
 				40F72A34284F154D00157DD4 /* FourtViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

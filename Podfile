@@ -7,5 +7,7 @@ target 'UIDesign' do
 
   # Pods for UIDesign
   pod 'SideMenu'
+  
+  pod 'XLPagerTabStrip'
 
 end

@@ -30,4 +30,50 @@ func closeMenu(containerView : UIView,home:CGAffineTransform){
      containerView.layer.cornerRadius = 0
       
     })
+    
 }
+
+ func createLayout1() -> UICollectionViewCompositionalLayout{
+     //item
+     let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.6)))
+    
+    let item1 = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4)))
+    
+    item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+    item1.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+    
+
+    let verticalGroup1 = NSCollectionLayoutGroup.vertical(
+               layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(0.5),
+                   heightDimension: .fractionalWidth(1)
+               ),
+               subitems:  [item,item1]
+           )
+    
+    let verticalGroup2 = NSCollectionLayoutGroup.vertical(
+               layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(0.5),
+                   heightDimension: .fractionalWidth(1)
+               ),
+               subitems:  [item1,item]
+           )
+    
+
+    //group
+    let verticalGroup = NSCollectionLayoutGroup.horizontal(
+        layoutSize: NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(1)
+        ),
+      subitems: [verticalGroup1,verticalGroup2]
+
+    )
+  
+    //section
+     let section = NSCollectionLayoutSection(group: verticalGroup)
+    
+    return UICollectionViewCompositionalLayout(section: section)
+ }

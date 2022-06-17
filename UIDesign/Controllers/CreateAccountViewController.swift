@@ -40,24 +40,34 @@ class CreateAccountViewController :UIViewController{
     
     
     @IBAction func creatAcntButton(_ sender: Any) {
-       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"AddMemberViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
     
     @IBAction func loginButton(_ sender: Any) {
-       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier:"LoginViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
      }
     
     @IBAction func showPasswordButton(_ sender: Any) {
         if(iconClick == false) {
            password.isSecureTextEntry = false
-            showHidePasswordBtn.setImage(UIImage(named: "eye"), for: .selected)
+            showHidePasswordBtn.setImage(UIImage(named: "eye"), for: .normal)
             
            iconClick = true
         } else {
             password.isSecureTextEntry = true
-            showHidePasswordBtn.setImage(UIImage(named: "eye.slash"), for: .normal)
+            showHidePasswordBtn.setImage(UIImage(systemName: "eye.slash"), for: .normal)
            iconClick = false
         }
          
+     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
      }
 }
